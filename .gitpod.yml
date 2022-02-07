@@ -1,0 +1,7 @@
+# Installing Minio client and running mc command during prebuild, results in invalid characters when a new workspace opens 
+tasks:
+  - init: |
+      wget https://dl.minio.io/client/mc/release/linux-amd64/mc
+      chmod +x mc
+      mv mc ../.
+      ../mc find
